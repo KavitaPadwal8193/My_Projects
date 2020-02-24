@@ -90,7 +90,11 @@ public class Tc1_Login extends Base {
     	  System.out.println("this is regressionnnn test");
       }
       
-    
+      @Test(groups = { "regression" })
+      public void fifithclass() {
+    	  System.out.println("this is fifth regressionnnn test");
+      }
+      
   	
 }
 	
