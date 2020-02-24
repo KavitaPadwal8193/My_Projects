@@ -95,6 +95,10 @@ public class Tc1_Login extends Base {
     	  System.out.println("this is fifth regress test");
       }
       
+	@Test(groups = { "regression" })
+      public void sixthclass() {
+    	  System.out.println("this is sixth regress test");
+      }
   	
 }
 	
