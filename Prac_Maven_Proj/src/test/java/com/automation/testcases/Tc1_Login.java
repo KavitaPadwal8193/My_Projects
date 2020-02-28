@@ -16,7 +16,7 @@ import com.automation.pages.page2_selectfacility;
 
 public class Tc1_Login extends Base {
 	
-	
+	/*
 	@Test(dataProvider="wordpress")
 	public void login(String username,String password) throws InterruptedException {
 		page1_Login login=new page1_Login();
@@ -77,7 +77,7 @@ public class Tc1_Login extends Base {
       public void secondclass() {
     	  System.out.println("this is first class");
     	  String expectedTitle = "TestingFailed";
-    	  Assert.assertEquals(driver.getTitle(), expectedTitle, "Title not matched"); 
+    	 Assert.assertEquals(expectedTitle, "not matching..so it will failed"); 
       }
       
       @Test(groups = { "smoke" },priority=0, description="My Sample Test Pass")
@@ -95,10 +95,10 @@ public class Tc1_Login extends Base {
     	  System.out.println("this is fifth regress test");
       }
       
-	@Test(groups = { "regression" })
+/*	@Test(groups = { "regression" })
       public void sixthclass() {
     	  System.out.println("this is sixth regress test");
-      }
+      }*/
   	
 }
 	

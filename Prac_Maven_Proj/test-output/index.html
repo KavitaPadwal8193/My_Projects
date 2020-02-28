@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>E:\java prog\Prac_Maven_Proj\testng1.xml</span>
+                    <span>E:\My_Git\My_Projects\Prac_Maven_Proj\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.Tc1_Login" hash-for-method="secondclass">secondclass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.Tc2_selectfacility" hash-for-method="fifthclass">fifthclass</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.Tc2_selectfacility" hash-for-method="fourthclass">fourthclass</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.Tc1_Login" hash-for-method="thirdclass">thirdclass</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,24 +131,40 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.automation.testcases.Tc2_selectfacility</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.automation.testcases.Tc1_Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="fifthclass">
-                  </a> <!-- fifthclass -->
-                  <span class="method-name">fifthclass</span>
+                  <a name="secondclass">
+                  </a> <!-- secondclass -->
+                  <span class="method-name">secondclass</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [not matching..so it will failed] but found [TestingFailed]
+	at com.automation.testcases.Tc1_Login.secondclass(Tc1_Login.java:80)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(My Sample Test Fail)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.automation.testcases.Tc1_Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="fourthclass">
-                  </a> <!-- fourthclass -->
-                  <span class="method-name">fourthclass</span>
+                  <a name="thirdclass">
+                  </a> <!-- thirdclass -->
+                  <span class="method-name">thirdclass</span>
+                  <em>
+(My Sample Test Pass)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,21 +172,25 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\java prog\Prac_Maven_Proj\testng1.xml</span>
+            <span class="header-content">E:\My_Git\My_Projects\Prac_Maven_Proj\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.automation.ExtentReportListener.ExtentReporterNG&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;groups&gt;
     &lt;run&gt;
       &lt;include name=&quot;smoke&quot;/&gt;
+      &lt;exclude name=&quot;regression&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.testcases.Tc2_selectfacility&quot;/&gt;
+      &lt;class name=&quot;com.automation.testcases.Tc1_Login&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -189,11 +218,11 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">fifthclass</span>
+                <span class="method-in-group-name">secondclass</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">fourthclass</span>
+                <span class="method-in-group-name">thirdclass</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -215,18 +244,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fifthclass')
-data.setCell(0, 2, 'com.automation.testcases.Tc2_selectfacility')
-data.setCell(0, 3, 13);
+data.setCell(0, 1, 'thirdclass')
+data.setCell(0, 2, 'com.automation.testcases.Tc1_Login')
+data.setCell(0, 3, 15);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'fourthclass')
-data.setCell(1, 2, 'com.automation.testcases.Tc2_selectfacility')
-data.setCell(1, 3, 4);
+data.setCell(1, 1, 'secondclass')
+data.setCell(1, 2, 'com.automation.testcases.Tc1_Login')
+data.setCell(1, 3, 7);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 ms</span>
+              <span class="suite-total-time">Total running time: 22 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -241,17 +270,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.automation.testcases.Tc2_selectfacility</span>
+              <span class="ignored-class-name">com.automation.testcases.Tc1_Login</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">pullreq</span>
+                <span class="ignored-method-name">fifithclass</span>
                 <br/>
-                <span class="ignored-method-name">anothersecondclass</span>
-                <br/>
-                <span class="ignored-method-name">Selectfacility</span>
+                <span class="ignored-method-name">fourthclass</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -263,14 +290,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.testcases.Tc2_selectfacility</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.testcases.Tc1_Login</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">fifthclass</span>
+                <span class="method-name">thirdclass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fourthclass</span>
-                <span class="method-start">16 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">secondclass</span>
+                <span class="method-start">23 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

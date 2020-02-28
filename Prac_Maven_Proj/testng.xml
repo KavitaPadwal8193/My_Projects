@@ -10,7 +10,7 @@
 </groups>
 
   <listeners>
-<listener class-name="com.automation.utilities.customreport"></listener>
+<listener class-name="com.automation.ExtentReportListener.ExtentReporterNG"></listener>
 </listeners>
 
 

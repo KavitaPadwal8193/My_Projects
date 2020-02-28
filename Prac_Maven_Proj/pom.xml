@@ -24,11 +24,17 @@
 		</dependency>
 
 
-		<dependency>
+<!--  		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.0.0</version>
-		</dependency>
+		</dependency>-->
+		
+		<dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
 
 
 		<dependency>
@@ -43,6 +49,12 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
+		
+		<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.6.2</version>
+</dependency>
 
 
 	</dependencies>
